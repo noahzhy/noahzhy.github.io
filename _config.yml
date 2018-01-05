@@ -62,8 +62,8 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: 05ba005135828ec9b553   #生成的clientID
-  clientSecret: 497ee6da7da88743792d565bccda85b66e88c2ad  #同上
+  clientID: 9a7e24e2cf6a94aaa7f7   #生成的clientID
+  clientSecret: 7d154a57726b3dc34faf5832fc147f4a47f8fb50  #同上
   repo: noahzhy.github.io    #仓库名称
   owner: noahzhy   #github用户名
   admin: noahzhy
