@@ -1,8 +1,8 @@
 # Site settings
-title: Welcome.
+title: Welcome
 SEOTitle: Noah Zhang's Blog | By Noah Zhang
 header-img: img/post-bg-desk.jpg
-email: qiubaiying@gmail.com
+email: noahzhy@gmail.com
 description: "My blog."
 keyword: "I'm Noah Zhang and majoring in Computer Science at Hanyang University. I set up this blog because I'd like to share and show something what I learned like Machine Learning or something else to like-minded friends."
 url: "https://noahzhy.github.io"          # your host, for absolute URL
@@ -11,7 +11,7 @@ github_repo: "https://github.com/noahzhy/noahzhy.github.io.git" # you code repos
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "My blog."
+sidebar-about-description: "Welcome to my blog."
 sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
