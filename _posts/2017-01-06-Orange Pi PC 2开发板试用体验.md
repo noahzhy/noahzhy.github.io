@@ -35,9 +35,9 @@ sudo df -h
 ## 磁盘扩容
 ### 方案一：图形界面扩容
 扩容方法有图形操作和命令行操作两种，图形操作的话，只要安装 Gparted 后，打开操作就行了。  
-
 ![](https://github.com/noahzhy/noahzhy.github.io/blob/master/img/df-h.jpg?raw=true)
 
+### 方案二：命令行扩容
 这里重点介绍一下命令行的操作。  
 命令行操作必需使用 ROOT 权限，按下面说明执行命令。
 
