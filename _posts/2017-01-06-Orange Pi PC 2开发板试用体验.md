@@ -68,14 +68,12 @@ $ resize2fs /dev/mmcblk0p2
 ## 收尾工作
 此时再查看你的分区大小，和你的TF卡一样了。系统到这里就算安装完成了，还有一些事情是要做的。  
 
-1. 设置系统时区为上海时区  
-
+### 1. 设置系统时区为上海时区 
 ```sh
 $ timedatectl set-timezone 'Asia/Shanghai'
 ```
 
-2. 更新源及系统  
-
+### 2. 更新源及系统  
 ```sh
 apt update && apt upgrade -y
 ```
