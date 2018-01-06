@@ -74,7 +74,6 @@ $ timedatectl set-timezone 'Asia/Shanghai'
 ```
 
 2. 更新源及系统   
-
 ```sh
 apt update && apt upgrade -y
 ```
