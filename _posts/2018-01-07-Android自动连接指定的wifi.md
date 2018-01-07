@@ -39,7 +39,8 @@ class WifiConnector(internal var wifiManager: WifiManager) {
         if (mHandler != null) {
             val msg = Message()
             msg.obj = info
-            mHandler!!.sendMessage(msg)// 向Handler发送消息
+            mHandler!!.sendMessage(msg)// 向Handler发送消息  
+            
         } else {
             Log.e("wifi", info)
         }
