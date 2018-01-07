@@ -12,8 +12,9 @@ tags:
 - 中文
 ---
 # Android 自动连接指定的 Wifi  
-不进行扫描操作，对指定的免密码 WIFI 进行连接（之前没有连接过）,基于这个需求动手写了一个 Demo，未连接成功时的状态，第一个参数输入 SSID，第二个参数输入密码，密码可以根据实例情况输入，也可以不输入密码，因为有些 Wifi 免密码。  
+不进行扫描操作，对指定的免密码 WIFI 进行连接（之前没有连接过）,基于这个需求动手写了一个 Demo，未连接成功时的状态，第一个参数输入 SSID，第二个参数输入密码，密码可以根据实例情况输入，也可以不输入密码，因为有些 Wifi 免密码。
 
+## WifiConnector.kt
 Wifi 连接管理类 WifiConnector.kt，用 Kotlin 重写了：
 ```kotlin
 package com.example.wificonnector
@@ -206,4 +207,18 @@ class WifiConnector(internal var wifiManager: WifiManager) {
     }
 }
 ```
+
+## MainActivity.kt 片段
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+        val wifiManager: WifiManager
+        val wifiConnector: WifiConnector  
+        ...  
+        wifiManager = getSystemService(Context.WIFI_SERVICE) as WifiManager
+        wifiConnector = WifiConnector(wifiManager)
+        wifiConnector.connect("ssid", "password", WifiConnector.WifiCipherType.WIFICIPHER_WPA)  
+        ...
+}
+```
+
 #### 参考：<http://www.cnblogs.com/best/p/5634724.html>
