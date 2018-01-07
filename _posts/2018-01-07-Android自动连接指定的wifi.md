@@ -11,7 +11,7 @@ tags:
 - Kotlin
 - 中文
 ---
-# Android自动连接指定的wifi，免密码或指定密码  
+# Android自动连接指定的wifi  
 不进行扫描操作，对指定的免密码WIFI进行连接（之前没有连接过）,基于这个需求动手写了一个Demo，未连接成功时的状态，第一个参数输入SSID，第二个参数输入密码，密码可以根据实例情况输入，也可以不输入密码，因为有些Wifi免密码。  
 
 Wifi连接管理类WifiConnector.kt，用Kotlin重写了：
