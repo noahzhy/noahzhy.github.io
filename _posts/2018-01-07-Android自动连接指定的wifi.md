@@ -72,8 +72,7 @@ class WifiConnector(internal var wifiManager: WifiManager) {
         return null
     }
 
-    private fun createWifiInfo(SSID: String, Password: String,
-                               Type: WifiCipherType): WifiConfiguration {
+    private fun createWifiInfo(SSID: String, Password: String, Type: WifiCipherType): WifiConfiguration {
         val config = WifiConfiguration()
         config.allowedAuthAlgorithms.clear()
         config.allowedGroupCiphers.clear()
@@ -81,11 +80,13 @@ class WifiConnector(internal var wifiManager: WifiManager) {
         config.allowedPairwiseCiphers.clear()
         config.allowedProtocols.clear()
         config.SSID = "\"" + SSID + "\""
-        // nopass
+        // nopass  
+        
         if (Type == WifiCipherType.WIFICIPHER_NOPASS) {
             config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE)
         }
         // wep  
+        
         if (Type == WifiCipherType.WIFICIPHER_WEP) {
             if (!TextUtils.isEmpty(Password)) {
                 if (isHexWepKey(Password)) {
@@ -100,6 +101,7 @@ class WifiConnector(internal var wifiManager: WifiManager) {
             config.wepTxKeyIndex = 0
         }
         // wpa  
+        
         if (Type == WifiCipherType.WIFICIPHER_WPA) {
             config.preSharedKey = "\"" + Password + "\""
             config.hiddenSSID = true
