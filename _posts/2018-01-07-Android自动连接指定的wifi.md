@@ -34,8 +34,8 @@ class WifiConnector(internal var wifiManager: WifiManager) {
     /**
      * 向UI发送消息
      * @param info 消息
-     */
-    fun sendMsg(info: String) {
+     */  
+     fun sendMsg(info: String) {
         if (mHandler != null) {
             val msg = Message()
             msg.obj = info
@@ -50,13 +50,13 @@ class WifiConnector(internal var wifiManager: WifiManager) {
         WIFICIPHER_WEP, WIFICIPHER_WPA, WIFICIPHER_NOPASS, WIFICIPHER_INVALID
     }
 
-    // 提供一个外部接口，传入要连接的无线网
+    // 提供一个外部接口，传入要连接的无线网  
     fun connect(ssid: String, password: String, type: WifiCipherType) {
         val thread = Thread(ConnectRunnable(ssid, password, type))
         thread.start()
     }
 
-    // 查看以前是否也配置过这个网络
+    // 查看以前是否也配置过这个网络  
     private fun isExsits(SSID: String): WifiConfiguration? {
         val existingConfigs = wifiManager
                 .configuredNetworks
@@ -81,7 +81,7 @@ class WifiConnector(internal var wifiManager: WifiManager) {
         if (Type == WifiCipherType.WIFICIPHER_NOPASS) {
             config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE)
         }
-        // wep
+        // wep  
         if (Type == WifiCipherType.WIFICIPHER_WEP) {
             if (!TextUtils.isEmpty(Password)) {
                 if (isHexWepKey(Password)) {
@@ -95,7 +95,7 @@ class WifiConnector(internal var wifiManager: WifiManager) {
             config.allowedKeyManagement.set(KeyMgmt.NONE)
             config.wepTxKeyIndex = 0
         }
-        // wpa
+        // wpa  
         if (Type == WifiCipherType.WIFICIPHER_WPA) {
             config.preSharedKey = "\"" + Password + "\""
             config.hiddenSSID = true
@@ -105,8 +105,8 @@ class WifiConnector(internal var wifiManager: WifiManager) {
             config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK)
             config.allowedPairwiseCiphers
                     .set(WifiConfiguration.PairwiseCipher.TKIP)
-            // 此处需要修改否则不能自动重联
-            // config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+            // 此处需要修改否则不能自动重联  
+            // config.allowedProtocols.set(WifiConfiguration.Protocol.WPA)  
             config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP)
             config.allowedPairwiseCiphers
                     .set(WifiConfiguration.PairwiseCipher.CCMP)
@@ -115,7 +115,7 @@ class WifiConnector(internal var wifiManager: WifiManager) {
         return config
     }
 
-    // 打开wifi功能
+    // 打开wifi功能  
     private fun openWifi(): Boolean {
         var bRet = true
         if (!wifiManager.isWifiEnabled) {
@@ -128,15 +128,15 @@ class WifiConnector(internal var wifiManager: WifiManager) {
 
         override fun run() {
             try {
-                // 打开wifi
+                // 打开wifi  
                 openWifi()
                 sendMsg("opened")
                 Thread.sleep(200)
-                // 开启wifi功能需要一段时间(我在手机上测试一般需要1-3秒左右)，所以要等到wifi
-                // 状态变成WIFI_STATE_ENABLED的时候才能执行下面的语句
+                // 开启wifi功能需要一段时间(我在手机上测试一般需要1-3秒左右)，所以要等到wifi  
+                // 状态变成WIFI_STATE_ENABLED的时候才能执行下面的语句  
                 while (wifiManager.wifiState == WifiManager.WIFI_STATE_ENABLING) {
                     try {
-                        // 为了避免程序一直while循环，让它睡个100毫秒检测……
+                        // 为了避免程序一直while循环，让它睡个100毫秒检测……  
                         Thread.sleep(100)
                     } catch (ie: InterruptedException) {
                     }
@@ -164,7 +164,7 @@ class WifiConnector(internal var wifiManager: WifiManager) {
                 sendMsg("enableNetwork connected=" + connected)
                 sendMsg("连接成功!")
             } catch (e: Exception) {
-                // TODO: handle exception
+                // TODO: handle exception  
                 sendMsg(e.message.toString())
                 e.printStackTrace()
             }
@@ -175,7 +175,7 @@ class WifiConnector(internal var wifiManager: WifiManager) {
     private fun isHexWepKey(wepKey: String): Boolean {
         val len = wepKey.length
 
-        // WEP-40, WEP-104, and some vendors using 256-bit WEP (WEP-232?)
+        // WEP-40, WEP-104, and some vendors using 256-bit WEP (WEP-232?)  
         return if (len != 10 && len != 26 && len != 58) {
             false
         } else isHex(wepKey)
