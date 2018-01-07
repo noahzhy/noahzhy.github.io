@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Orange Pi PC 2开发板试用体验
-subtitle:   简单介绍一下Orange Pi PC 2开发板试用体验心得。
+subtitle:   简单介绍一下Orange Pi PC 2开发板试用体验心得
 date:       2017-01-06
 author:     Noah Zhang
 header-img: img/post-bg-2018.jpg
