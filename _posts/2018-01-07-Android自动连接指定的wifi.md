@@ -247,4 +247,4 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
-#### 参考：<http://www.cnblogs.com/best/p/5634724.html>
+#### 参考：<http://club.gizwits.com/thread-3685-1-1.html>
