@@ -242,7 +242,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
         ...  
         wifiManager = getSystemService(Context.WIFI_SERVICE) as WifiManager
         wifiAutoConnectorManager = WifiAutoConnectManager(wifiManager)
-        wifiAutoConnectorManager.connect("ssid", "password",WifiAutoConnectManager.WifiCipherType.WIFICIPHER_WPA)
+        wifiAutoConnectorManager.connect("ssid", "password", WifiAutoConnectManager.WifiCipherType.WIFICIPHER_WPA)
         ...
 }
 ```
