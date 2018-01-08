@@ -71,9 +71,11 @@ class WifiAutoConnectManager(internal var wifiManager: WifiManager) {
         // nopass  
         
         if (Type == WifiCipherType.WIFICIPHER_NOPASS) {
-            // config.wepKeys[0] = "";
+            // config.wepKeys[0] = ""  
+            
             config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE)
-            // config.wepTxKeyIndex = 0;
+            // config.wepTxKeyIndex = 0  
+            
         }
         // wep  
         
@@ -99,15 +101,13 @@ class WifiAutoConnectManager(internal var wifiManager: WifiManager) {
                     .set(WifiConfiguration.AuthAlgorithm.OPEN)
             config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP)
             config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK)
-            config.allowedPairwiseCiphers
-                    .set(WifiConfiguration.PairwiseCipher.TKIP)
+            config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP)
             // 此处需要修改否则不能自动重联  
             
             // config.allowedProtocols.set(WifiConfiguration.Protocol.WPA)  
             
             config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP)
-            config.allowedPairwiseCiphers
-                    .set(WifiConfiguration.PairwiseCipher.CCMP)
+            config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP)
             config.status = WifiConfiguration.Status.ENABLED
 
         }
@@ -147,7 +147,6 @@ class WifiAutoConnectManager(internal var wifiManager: WifiManager) {
                     // 为了避免程序一直while循环，让它睡个100毫秒检测……  
                     
                     Thread.sleep(100)
-
                 } catch (ie: InterruptedException) {
                     Log.e(TAG, ie.toString())
                 }
