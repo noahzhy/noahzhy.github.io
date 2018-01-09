@@ -118,7 +118,7 @@ sudo iptables -t nat -A  POSTROUTING -o eth0 -j MASQUERADE
 ```sh
 sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 ```
-编辑```/etc/rc.local```并在```exit 0```上方添加这个以在启动时安装这些规则。
+编辑```/etc/rc.local```并在```exit 0```上方添加以下这些规则以用于在启动时安装。
 ```sh
 iptables-restore < /etc/iptables.ipv4.nat
 ```
