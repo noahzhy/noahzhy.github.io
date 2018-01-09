@@ -175,6 +175,9 @@ bridge=br0
 ...
 ```
 现在重启 Raspberry Pi  
+```sh
+sudo reboot
+```
   
 现在无线局域网和 Raspberry Pi 上的以太网连接之间应该有一个功能上的桥梁，任何与 Raspberry Pi 接入点相连的设备，都会像连接有线以太网到接入点那样工作。  
   
