@@ -97,4 +97,4 @@ CI_DOCKER_EXTRA_PARAMS="-e CI_BUILD_PYTHON=python3 -e CROSSTOOL_PYTHON_INCLUDE_P
 
 这一切仍然都是实验性的，所以如果这些都不适合你，请把错误[反馈](https://github.com/tensorflow/tensorflow/issues)上来。 我希望我们将能够为将来的每个主要版本提供官方稳定的 Pi 二进制文件，就像我们为 Android 和 iOS 所做的一样，所以了解事情的效果对我来说是非常重要的。 我也很高兴听到你在 Pi 上为 TensorFlow 找到的很酷的新应用程序，所以请让我知道你的构建过程！  
 
-#### 参考：<https://petewarden.com/2017/08/20/cross-compiling-tensorflow-for-the-raspberry-pi/>
+#### 原文：<https://petewarden.com/2017/08/20/cross-compiling-tensorflow-for-the-raspberry-pi/>
