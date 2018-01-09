@@ -123,9 +123,11 @@ sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 iptables-restore < /etc/iptables.ipv4.nat
 ```
 重启  
-  
+```sh
+sudo reboot
+```
 
-使用无线设备搜索网络。 现在应该存在了你在 hostapd 配置中指定的网络 SSID，并且应该可以使用指定的密码进行访问。 如果在 Raspberry Pi 接入点上启用了 SSH，应该可以通过如下方式从另一个 Linux 机器（或具有 SSH 连接功能的系统）连接到它，假设为```pi``帐户：
+现在使用无线设备搜索网络。 应该存在一个你在 hostapd 配置中指定的网络 SSID，并且应该可以使用指定的密码进行访问。 如果在 Raspberry Pi 接入点上启用了 SSH，应该可以通过如下方式从另一个 Linux 机器（或具有 SSH 连接功能的系统）连接到它，假设为```pi``帐户：
 ```sh
 ssh pi@192.168.4.1
 ```
@@ -145,6 +147,7 @@ sudo systemctl stop hostapd
 sudo nano /etc/dhcpcd.conf
 ```
 将```denyinterfaces wlan0```和```denyinterfaces eth0```添加到文件的末尾（但在其他添加的```interface```接口之上）并保存该文件。   
+  
 在这个例子中添加一个新的名为```br0```的桥。
 ```sh
 sudo brctl addbr br0
