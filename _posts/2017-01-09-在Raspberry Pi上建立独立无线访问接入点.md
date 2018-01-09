@@ -17,7 +17,8 @@ tags:
   
 需要注意的是，本文已在 Raspberry Pi 3 上进行了测试，有些 USB 无线网卡可能需要对其设置稍作更改。 如果你在使用 USB 无线网卡时遇到问题，请查看论坛。  
   
-要将基于树莓派的接入点添加到现有的网络，[参考本节](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md#internet-sharing)。 为了可以作为接入点运行，Raspberry Pi 将需要安装接入点软件以及 DHCP 服务器软件，为连接设备提供网络地址。 确保你的 Raspberry Pi 使用最新版本的 Raspbian（日期为2017或更高版本）。   
+要将基于树莓派的接入点添加到现有的网络，[参考本节](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md#internet-sharing)。 为了可以作为接入点运行，Raspberry Pi 将需要安装接入点软件以及 DHCP 服务器软件，为连接设备提供网络地址。 确保你的 Raspberry Pi 使用最新版本的 Raspbian（日期为2017或更高版本）。  
+  
 使用以下命令来更新你的 Raspbian 安装器：
 ```sh
 sudo apt-get update
