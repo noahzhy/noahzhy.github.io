@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      在 Raspberry Pi 上建立独立无线访问接入点
-subtitle:   树莓派可以作为一个无线接入点，运行一个独立的网络。
+subtitle:   树莓派可以作为一个无线接入点，运行一个独立的网络
 date:       2018-01-09
 author:     Noah Zhang
 header-img: img/post-bg-2018.jpg
