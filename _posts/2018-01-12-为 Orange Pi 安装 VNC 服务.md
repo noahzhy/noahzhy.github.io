@@ -82,3 +82,5 @@ vncserver :1
 ```
   
 ![](https://github.com/noahzhy/noahzhy.github.io/blob/master/img/desktop.jpg?raw=true)
+
+#### 参考：<https://www.jianshu.com/p/78ed5c90438e>
