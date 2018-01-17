@@ -39,8 +39,8 @@ tags:
 
 假如你已经有了相机模块，你需要安装它。安装起来非常简单，并且替代我的教程来安装相机模块，我推荐你去看官方的 Raspberry Pi 相机安装指南：
 
-<iframe width="854" height="480" src="https://www.youtube.com/embed/GImeVqHQzsE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+<iframe width="854" height="480" src="https://www.youtube.com/embed/GImeVqHQzsE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>  
+  
 如果安装好的话，应该如下图所示：  
 
 ![](https://github.com/noahzhy/noahzhy.github.io/raw/master/img/installing_camera_board-768x1024.jpg)  
@@ -221,6 +221,8 @@ $ python test_video.py
 ```
 下面是我执行上面的命令的一个示例：  
   
-<iframe width="1340" height="727" src="https://www.youtube.com/embed/HVuEQ7avDqo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="1340" height="727" src="https://www.youtube.com/embed/HVuEQ7avDqo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>  
   
 正如你所看到的，Raspberry Pi 相机的视频流正在被 OpenCV 读取，然后显示在屏幕上！此外，Raspberry Pi 相机在以 32 FPS 的速度访问画面时不会出现滞后现象。 当然，我们并没有对单个帧进行任何处理，但是正如我在博客文章中所展示的那样，即使在处理每个帧时，Pi 2 也可以很容易地保持 24-32 FPS。
+
+#### 原文：https://www.pyimagesearch.com/2015/03/30/accessing-the-raspberry-pi-camera-with-opencv-and-Python/
