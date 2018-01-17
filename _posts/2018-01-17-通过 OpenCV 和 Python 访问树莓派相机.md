@@ -39,7 +39,7 @@ tags:
 
 假如你已经有了相机模块，你需要安装它。安装起来非常简单，并且替代我的教程来安装相机模块，我推荐你去看官方的 Raspberry Pi 相机安装指南：
 
-https://youtu.be/GImeVqHQzsE
+<iframe width="854" height="480" src="https://www.youtube.com/embed/GImeVqHQzsE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 如果安装好的话，应该如下图所示：  
 
