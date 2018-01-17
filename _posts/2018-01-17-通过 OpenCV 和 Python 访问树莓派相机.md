@@ -221,7 +221,7 @@ $ python test_video.py
 ```
 下面是我执行上面的命令的一个示例：  
   
-<iframe width="1340" height="727" src="https://www.youtube.com/embed/HVuEQ7avDqo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>  
+<iframe width="854" height="480" src="https://www.youtube.com/embed/HVuEQ7avDqo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>  
   
 正如你所看到的，Raspberry Pi 相机的视频流正在被 OpenCV 读取，然后显示在屏幕上！此外，Raspberry Pi 相机在以 32 FPS 的速度访问画面时不会出现滞后现象。 当然，我们并没有对单个帧进行任何处理，但是正如我在博客文章中所展示的那样，即使在处理每个帧时，Pi 2 也可以很容易地保持 24-32 FPS。
 
