@@ -127,7 +127,7 @@ iptables-restore < /etc/iptables.ipv4.nat
 sudo reboot
 ```
 
-现在使用无线设备搜索网络。 应该存在一个你在 hostapd 配置中指定的网络 SSID，并且应该可以使用指定的密码进行访问。 如果在 Raspberry Pi 接入点上启用了 SSH，应该可以通过如下方式从另一个 Linux 机器（或具有 SSH 连接功能的系统）连接到它，假设为```pi``帐户：
+现在使用无线设备搜索网络。 应该存在一个你在 hostapd 配置中指定的网络 SSID，并且应该可以使用指定的密码进行访问。 如果在 Raspberry Pi 接入点上启用了 SSH，应该可以通过如下方式从另一个 Linux 机器（或具有 SSH 连接功能的系统）连接到它，假设为```pi```帐户：
 ```sh
 ssh pi@192.168.4.1
 ```
