@@ -241,7 +241,7 @@ python motion_detector.py --video videos/example_01.mp4
 
 注意到在门被打开前没有进行运动检测——然后我们可以检测到我自己从门中走过。你可以在这里看到全部视频：  
 
-http://www.youtube.com/embed/fi4LORwk8Fc?feature=oembed
+<iframe width="854" height="480" src="https://www.youtube.com/embed/fi4LORwk8Fc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 现在，我安装在用于监视厨房和客厅的摄像机表现如何呢？然我们一探究竟。输入下面命令：
 ```sh
@@ -253,7 +253,8 @@ python motion_detector.py --video videos/example_02.mp4
 
 同样，这里是我们运动检测结果的完整视频：
 
-http://www.youtube.com/embed/36j238XtcIE?feature=oembed  
+<iframe width="854" height="480" src="
+https://www.youtube.com/embed/36j238XtcIE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 正如你看到的，我们的运动检测系统尽管非常简单，但表现还不错！我们可以正常检测到我进入客厅和离开房间。  
   
