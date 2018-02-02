@@ -205,7 +205,7 @@ delta = |background_model – current_frame|
     cv2.putText(frame, datetime.datetime.now().strftime("%A %d %B %Y %I:%M:%S%p"),
         (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 0, 255), 1)
  
-    显示当前帧并记录用户是否按下按键
+    # 显示当前帧并记录用户是否按下按键
     cv2.imshow("Security Feed", frame)
     cv2.imshow("Thresh", thresh)
     cv2.imshow("Frame Delta", frameDelta)
