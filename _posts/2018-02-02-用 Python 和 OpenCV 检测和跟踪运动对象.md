@@ -198,14 +198,13 @@ delta = |background_model – current_frame|
   
 我们在**第14行**开始对轮廓线进行遍历，在**15行**滤掉小的，不相关的轮廓。 如果轮廓面积比我们提供的```--min-area```值大，我们会在前景和移动区域画边框线。（**23-25行**）。我们同样会更新text状态字符串来表示这个房间“被占领”（**Occupied**）了。
 ```python
-# draw the text and timestamp on the frame
     # 在当前帧上写文字以及时间戳
     cv2.putText(frame, "Room Status: {}".format(text), (10, 20),
         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
     cv2.putText(frame, datetime.datetime.now().strftime("%A %d %B %Y %I:%M:%S%p"),
         (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 0, 255), 1)
  
-    # 显示当前帧并记录用户是否按下按键
+    # 显示当前帧并记录用户是否按下按键
     cv2.imshow("Security Feed", frame)
     cv2.imshow("Thresh", thresh)
     cv2.imshow("Frame Delta", frameDelta)
