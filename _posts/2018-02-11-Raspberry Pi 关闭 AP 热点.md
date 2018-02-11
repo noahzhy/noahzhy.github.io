@@ -2,7 +2,7 @@
 layout:     post
 title:      Raspberry Pi 关闭 AP 热点
 subtitle:   关闭 AP 热点，切换回 STA 模式
-date:       2017-02-11
+date:       2018-02-11
 author:     Noah Zhang
 header-img: img/post-bg-2018.jpg
 catalog: true
